@@ -11,7 +11,6 @@ public class Main {
         task9();
         task10();
         task11();
-        task11();
         task12();
         task13();
         task14();
@@ -26,35 +25,30 @@ public class Main {
             System.out.println(i);
         }
     }
-
     public static void task2() {
         System.out.println("Task 2");
         for (int n = 10; n >= 1; n = n - 1) {
             System.out.println(n);
         }
     }
-
     public static void task3() {
         System.out.println("Task 3");
         for (int l = 0; l <= 16; l = l + 2) {
             System.out.println(l);
         }
     }
-
     public static void task4() {
         System.out.println("Task 4");
         for (int t = 10; t >= -10; t = t - 1) {
             System.out.println(t);
         }
     }
-
     public static void task5() {
         System.out.println("Task 5");
         for (int y = 1904; y <= 2096; y = y + 4) {
             System.out.println(y + "th is leap year");
         }
     }
-
     public static void task6() {
         System.out.println("Task 6");
         for (int s = 7; s <= 98; s = s + 7) {
@@ -62,7 +56,6 @@ public class Main {
         }
         System.out.println(" ");
     }
-
     public static void task7() {
         System.out.println("Task 7");
         for (int m = 1; m <= 512; m = m * 2) {
@@ -70,7 +63,6 @@ public class Main {
         }
         System.out.println(" ");
     }
-
     public static void task8() {
         System.out.println("Task 8");
         int save = 29000;
@@ -80,18 +72,15 @@ public class Main {
             System.out.println("In the " + x + "th month the sum of saving is " + total);
         }
     }
-
     public static void task9() {
         System.out.println("Task 9");
-        int newSave = 29000;
-        int newTotal = 0;
+        double newSave = 29000;
+        double newTotal = 0;
         for (int x = 1; x <= 12; x++) {
-            newTotal = newTotal + newTotal / 100;
-            newTotal = newTotal + newSave;
-            System.out.println("In the " + x + "th month the sum of saving is " + newTotal);
+            newTotal = (newTotal + newTotal / 100) + newSave;
+            System.out.printf("In the " + x + "th month the sum of saving is %.2f rubles \n" ,newTotal);
         }
     }
-
     public static void task10() {
         System.out.println("Task 10");
         int multiplier = 2;
@@ -101,7 +90,6 @@ public class Main {
             System.out.println(multiplier + "*" + z + "=" + product);
         }
     }
-
     public static void task11() {
         System.out.println("Task 11"); //The second lesson is starting here
         int sum = 0;
@@ -113,7 +101,6 @@ public class Main {
             System.out.println("In the " + month + "th month saving is " + sum + " rubles");
         }
     }
-
     public static void task12() {
         System.out.println("Task 12");
         int i = 0;
@@ -129,34 +116,31 @@ public class Main {
         }
         System.out.println();
     }
-
     public static void task13() {
         System.out.println("Task 13");
-        int population = 12_000_000;
-        int birtRateForThousand = 17;
-        int mortalityForThousand = 8;
+        double population = 12_000_000;
+        double birtRateForThousand = 17;
+        double mortalityForThousand = 8;
         int year = 0;
         while (year < 10) {
             year = year + 1;
-            int birthRateOfCountry = population / 1000 * birtRateForThousand;
-            int mortalityOfCountry = population / 1000 * mortalityForThousand;
+            double birthRateOfCountry = population / 1000 * birtRateForThousand;
+            double mortalityOfCountry = population / 1000 * mortalityForThousand;
             population = population + birthRateOfCountry - mortalityOfCountry;
-            System.out.println("Population in the " + year + "th year is " + population + " units");
+            System.out.printf("Population in the " + year + "th year is %.2f units \n", population);
         }
     }
-
     public static void task14() {
-        System.out.println("Task 16");
+        System.out.println("Task 14");
         double money = 15_000;
         double improve = 0.07;
         int month = 0;
         while (money < 12_000_000) {
             month = month + 1;
             money = money + money * improve;
-            System.out.println("In the " + month + "th month saving is " + money + " rubles");
+            System.out.printf("In the " + month + "th month saving is %.2f rubles \n", money);
         }
     }
-
     public static void task15() {
         System.out.println("Task 15");
         double money = 15_000;
@@ -166,21 +150,21 @@ public class Main {
             month = month + 1;
             money = money + money * improve;
             if (month % 6 == 0 || money >= 12_000_000) {
-                System.out.println("In the " + month + "th month saving is " + money + " rubles");
+                System.out.printf("In the " + month + "th month saving is %.2f rubles \n", money);
             }
         }
     }
     public static void task16() {
         System.out.println("Task 16");
         double money = 15_000;
-        double improve = 0.07;
+        double interest = 0.07;
         int month = 0;
         int montA9Years = 12 * 9;
         while (month < montA9Years) {
             month = month + 1;
-            money = money + money * improve;
+            money = money + money * interest;
             if (month % 6 == 0 ) {
-                System.out.println("In the " + month + "th month saving is " + money + " rubles");
+                System.out.printf("In the " + month + "th month saving is %.2f rubles \n", money);
             }
         }
     }
